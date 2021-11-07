@@ -14,6 +14,9 @@ function App() {
   const [reconnect, setReconnect] = useState(true);
   const status = useNetworkStatus();
 
+  // assignment-solulab.vercel.app
+  // https://assignment-solulab.vercel.app/
+
   console.log("Internet connection" , status)
   
   function separator(numb) {
@@ -97,7 +100,7 @@ function App() {
           }
 
 
-          <p>HIGHT {separator(high)}</p>
+          <p>HIGH {separator(high)}</p>
         </div>
       </div>
 
