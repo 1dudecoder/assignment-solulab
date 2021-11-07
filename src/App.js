@@ -14,7 +14,7 @@ function App() {
   const [reconnect, setReconnect] = useState(true);
   const status = useNetworkStatus();
 
-  console.log(status)
+  console.log("Internet connection" , status)
   
   function separator(numb) {
     var str = numb.toString().split(".");
@@ -33,7 +33,7 @@ function App() {
         setHigh(notstring[8]);
         setVolume(parseInt(notstring[7]));
         setLastPrice(parseInt(notstring[6]));
-        setdailyChangeRelative((notstring[4] * -1).toFixed(2));
+        setdailyChangeRelative((notstring[4]).toFixed(2));
         setMypercentage(notstring[5]);
       }
     }
@@ -85,7 +85,7 @@ function App() {
               VOL {separator(volume * lastPrice)}{" "}
               <span style={{ textDecoration: "underline" }}>BTC</span>
             </p>
-            <p>Low {separator(low)}</p>
+            <p>LOW {separator(low)}</p>
           </div>
         </div>
 
@@ -93,11 +93,11 @@ function App() {
           <p>{separator(lastPrice)}</p>
 
           {
-            mypercentage * 100 > 0 ? <p style={{color:"#01a781"}}> { separator(dailyChangeRelative) } <span style={{color:"#01a781"}}>⏶</span> ({(mypercentage * 100).toFixed(2) * -1 }%) </p>    : <p style={{color:"#e44b44"}}> { separator(dailyChangeRelative)} <span style={{color:"#e44b44"}}>⏷</span> ({(mypercentage * 100).toFixed(2) * -1}%)</p> 
+            mypercentage * 100 > 0 ? <p style={{color:"#01a781"}}> { separator(dailyChangeRelative)  } <span style={{color:"#01a781"}}>⏶</span> ({(mypercentage * 100).toFixed(2) }%) </p>    : <p style={{color:"#e44b44"}}> { separator(dailyChangeRelative)} <span style={{color:"#e44b44"}}>⏷</span> ({ (mypercentage * 100).toFixed(2)}%)</p> 
           }
 
 
-          <p>High {separator(high)}</p>
+          <p>HIGHT {separator(high)}</p>
         </div>
       </div>
 
